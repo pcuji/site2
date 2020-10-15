@@ -22,7 +22,7 @@ class IndexPage extends React.Component {
             👋
           </span>
         </h1>
-        <p>Welcome to your new Gatsby website. You are on your home page.</p>
+        <p>Welcome to my new website.</p>
         <p>
           This starter comes out of the box with styled components and Gatsby's
           default starter blog running on Netlify CMS.
