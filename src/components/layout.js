@@ -1,8 +1,38 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { createGlobalStyle } from "styled-components"
 
 import { rhythm, scale } from "../utils/typography"
+
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    color: green;
+    background-color: #4a4a4a;
+    
+    
+  }
+`;
+
+
+// const Layout = ({ children, location }) => {
+//   return (
+//         <div >
+//           <SkipToContent href="#content">Skip to Content</SkipToContent>
+//             <StyledContent>
+//               <div id="content">
+//                 {children}
+//               </div>
+//               <Link to="/contact/">Get In Touch </Link>
+//             </StyledContent>
+        
+//         </div>
+  
+//   );
+// };
+
+// export default Layout;
 
 class Layout extends React.Component {
   render() {
@@ -34,12 +64,14 @@ class Layout extends React.Component {
       )
     } else {
       header = (
+        
         <h3
           style={{
             fontFamily: `Montserrat, sans-serif`,
             marginTop: 0,
           }}
         >
+          <GlobalStyle  />
           <Link
             style={{
               boxShadow: `none`,
@@ -66,6 +98,7 @@ class Layout extends React.Component {
           <header>{header}</header>
           <main>{children}</main>
         </div>
+       
         <Footer>
           © {new Date().getFullYear()}, Designed & Build by Pedro Cuji 
           {` `}

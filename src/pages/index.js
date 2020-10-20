@@ -1,10 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
-
+// import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
 import Social from "../components/social"
+import  GlobalStyle  from '../styles/GlobalStyle';
+
 
 class IndexPage extends React.Component {
   render() {
@@ -17,6 +19,7 @@ class IndexPage extends React.Component {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <img style={{ margin: 0 }} src="./austin-distel-trading.jpg" alt="Gatsby Scene" />
+        <GlobalStyle /> 
         <h1>
           Hey people{" "}
           <span role="img" aria-label="wave emoji">
@@ -29,9 +32,11 @@ class IndexPage extends React.Component {
           default starter blog running on Netlify CMS.
         </p>
         <p>Now go build something great!</p>
+        <Link to="/contact/">Get In Touch </Link>
         <Link to="/blog/">
           <Button marginTop="35px">Go to Blog</Button>
         </Link>
+        
         <Social socialText ="follow me on twitter"/>
       </Layout>
     )
